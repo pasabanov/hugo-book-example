@@ -1,8 +1,9 @@
-# hugo server --minify --themesDir ../.. --baseURL=http://0.0.0.0:1313/theme/hugo-book/
-
 baseURL = 'https://example.com/'
 title = 'Hugo Book'
-theme = 'hugo-book'
+
+[module]
+[[module.imports]]
+path = 'github.com/pasabanov/hugo-book'
 
 # Book configuration
 disablePathToLower = true
@@ -41,7 +42,7 @@ enableGitInfo = true
 # [[menu.before]]
 [[menu.after]]
 	name = "Github"
-	url = "https://github.com/pasabanov/hugo-book"
+	url = "https://github.com/pasabanov/hugo-book-example"
 	weight = 10
 
 [[menu.after]]
