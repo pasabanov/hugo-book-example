@@ -1,2 +1,8 @@
 public/
 .hugo_build.lock
+
+/.idea/*
+!/.idea/codeStyles/
+
+/.vscode/*
+!/.vscode/settings.json
