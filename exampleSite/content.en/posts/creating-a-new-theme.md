@@ -525,7 +525,7 @@ $ cat public/index.html
 <!DOCTYPE html> 
 <html> 
 <body> 
-  <p>hugo says hello!</p> 
+	<p>hugo says hello!</p> 
 </html>
 ```
 
@@ -538,11 +538,11 @@ $ cat public/index.html
 <!DOCTYPE html> 
 <html> 
 <body> 
-  <p>hugo says hello!</p> 
+	<p>hugo says hello!</p> 
 <script>document.write('<script src="http://' 
-        + (location.host || 'localhost').split(':')[0] 
-    + ':1313/livereload.js?mindelay=10"></' 
-        + 'script>')</script></body> 
+				+ (location.host || 'localhost').split(':')[0] 
+		+ ':1313/livereload.js?mindelay=10"></' 
+				+ 'script>')</script></body> 
 </html>
 ```
 
@@ -678,9 +678,9 @@ $ vi themes/zafta/layouts/index.html
 <!DOCTYPE html>
 <html>
 <body>
-  {{ range first 10 .Data.Pages }}
-    <h1>{{ .Title }}</h1>
-  {{ end }}
+	{{ range first 10 .Data.Pages }}
+		<h1>{{ .Title }}</h1>
+	{{ end }}
 </body>
 </html>
 :wq
@@ -727,11 +727,11 @@ $ cat public/index.html
 <!DOCTYPE html>
 <html>
 <body>
-  
-    <h1>second</h1>
-  
-    <h1>first</h1>
-  
+	
+		<h1>second</h1>
+	
+		<h1>first</h1>
+	
 </body>
 </html>
 $
@@ -767,11 +767,11 @@ $ vi themes/zafta/layouts/_default/single.html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{ .Title }}</title>
+	<title>{{ .Title }}</title>
 </head>
 <body>
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+	<h1>{{ .Title }}</h1>
+	{{ .Content }}
 </body>
 </html>
 :wq
@@ -806,11 +806,11 @@ $ cat public/post/first/index.html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>first</title>
+	<title>first</title>
 </head>
 <body>
-  <h1>first</h1>
-  <p>my first post</p>
+	<h1>first</h1>
+	<p>my first post</p>
 
 </body>
 </html>
@@ -819,11 +819,11 @@ $ cat public/post/second/index.html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>second</title>
+	<title>second</title>
 </head>
 <body>
-  <h1>second</h1>
-  <p>my second post</p>
+	<h1>second</h1>
+	<p>my second post</p>
 
 </body>
 </html>
@@ -841,9 +841,9 @@ $ vi themes/zafta/layouts/index.html
 <!DOCTYPE html>
 <html>
 <body>
-  {{ range first 10 .Data.Pages }}
-    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-  {{ end }}
+	{{ range first 10 .Data.Pages }}
+		<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+	{{ end }}
 </body>
 </html>
 ```
@@ -875,10 +875,10 @@ $ cat public/index.html
 <!DOCTYPE html>
 <html>
 <body>
-  
-    <h1><a href="/post/second/">second</a></h1>
-  
-    <h1><a href="/post/first/">first</a></h1>
+	
+		<h1><a href="/post/second/">second</a></h1>
+	
+		<h1><a href="/post/first/">first</a></h1>
   
 </body>
 </html>
@@ -940,14 +940,14 @@ $ cat public/index.html
 <!DOCTYPE html>
 <html>
 <body>
-    <h1><a href="http://localhost:1313/post/theme/">creating a new theme</a></h1>
-    <h1><a href="http://localhost:1313/about-time/">about</a></h1>
-    <h1><a href="http://localhost:1313/post/second-post/">second</a></h1>
-    <h1><a href="http://localhost:1313/post/first-post/">first</a></h1>
+		<h1><a href="http://localhost:1313/post/theme/">creating a new theme</a></h1>
+		<h1><a href="http://localhost:1313/about-time/">about</a></h1>
+		<h1><a href="http://localhost:1313/post/second-post/">second</a></h1>
+		<h1><a href="http://localhost:1313/post/first-post/">first</a></h1>
 <script>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
+				+ (location.host || 'localhost').split(':')[0]
 		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+				+ 'script>')</script></body>
 </html>
 ```
 
@@ -958,19 +958,19 @@ $ vi themes/zafta/layouts/index.html
 <!DOCTYPE html>
 <html>
 <body>
-  <h1>posts</h1>
-  {{ range first 10 .Data.Pages }}
-    {{ if eq .Type "post"}}
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ end }}
-  {{ end }}
+	<h1>posts</h1>
+	{{ range first 10 .Data.Pages }}
+		{{ if eq .Type "post"}}
+			<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+		{{ end }}
+	{{ end }}
 
-  <h1>pages</h1>
-  {{ range .Data.Pages }}
-    {{ if eq .Type "page" }}
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ end }}
-  {{ end }}
+	<h1>pages</h1>
+	{{ range .Data.Pages }}
+		{{ if eq .Type "page" }}
+			<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+		{{ end }}
+	{{ end }}
 </body>
 </html>
 :wq
@@ -1045,19 +1045,19 @@ Let's change the home page template to use these new partials.
 $ vi themes/zafta/layouts/index.html
 {{ partial "header.html" . }}
 
-  <h1>posts</h1>
-  {{ range first 10 .Data.Pages }}
-    {{ if eq .Type "post"}}
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ end }}
-  {{ end }}
+	<h1>posts</h1>
+	{{ range first 10 .Data.Pages }}
+		{{ if eq .Type "post"}}
+			<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+		{{ end }}
+	{{ end }}
 
-  <h1>pages</h1>
-  {{ range .Data.Pages }}
-    {{ if or (eq .Type "page") (eq .Type "about") }}
-      <h2><a href="{{ .Permalink }}">{{ .Type }} - {{ .Title }} - {{ .RelPermalink }}</a></h2>
-    {{ end }}
-  {{ end }}
+	<h1>pages</h1>
+	{{ range .Data.Pages }}
+		{{ if or (eq .Type "page") (eq .Type "about") }}
+			<h2><a href="{{ .Permalink }}">{{ .Type }} - {{ .Title }} - {{ .RelPermalink }}</a></h2>
+		{{ end }}
+	{{ end }}
 
 {{ partial "footer.html" . }}
 :wq
@@ -1071,8 +1071,8 @@ Generate the web site and verify the results. The title on the home page is now 
 $ vi themes/zafta/layouts/_default/single.html
 {{ partial "header.html" . }}
 
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+	<h1>{{ .Title }}</h1>
+	{{ .Content }}
 
 {{ partial "footer.html" . }}
 :wq
@@ -1098,9 +1098,9 @@ Posts use the default single template, so we'll change that file.
 $ vi themes/zafta/layouts/_default/single.html
 {{ partial "header.html" . }}
 
-  <h1>{{ .Title }}</h1>
-  <h2>{{ .Date.Format "Mon, Jan 2, 2006" }}</h2>
-  {{ .Content }}
+	<h1>{{ .Title }}</h1>
+	<h2>{{ .Date.Format "Mon, Jan 2, 2006" }}</h2>
+	{{ .Content }}
 
 {{ partial "footer.html" . }}
 :wq
@@ -1121,8 +1121,8 @@ $ mkdir themes/zafta/layouts/post
 $ vi themes/zafta/layouts/_default/single.html
 {{ partial "header.html" . }}
 
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+	<h1>{{ .Title }}</h1>
+	{{ .Content }}
 
 {{ partial "footer.html" . }}
 :wq
@@ -1134,9 +1134,9 @@ Now we'll update the post's version of the single template. If you remember Hugo
 $ vi themes/zafta/layouts/post/single.html
 {{ partial "header.html" . }}
 
-  <h1>{{ .Title }}</h1>
-  <h2>{{ .Date.Format "Mon, Jan 2, 2006" }}</h2>
-  {{ .Content }}
+	<h1>{{ .Title }}</h1>
+	<h2>{{ .Date.Format "Mon, Jan 2, 2006" }}</h2>
+	{{ .Content }}
 
 {{ partial "footer.html" . }}
 :wq
