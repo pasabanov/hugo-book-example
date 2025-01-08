@@ -68,7 +68,7 @@ at ademptae, mira.
     } else {
         pmu.disk_captcha = digital_ppp_pci + recursionTransistor(5, dram);
         ajax_service += grayscalePythonLock;
-        google_scroll_capacity = ftp + engine_dslam_sidebar / tape - 1;
+        scroll_capacity = ftp + engine_dslam_sidebar / tape - 1;
     }
     drive_rw = zipTftp;
     var suffix = software_router_extension.dimm_ddr(-5,

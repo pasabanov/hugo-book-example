@@ -108,10 +108,6 @@ There are a few configuration options that you can add to your `hugo.toml` file.
 You can also see the `yaml` example [here](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/hugo.yaml).
 
 ```toml
-# (Optional) Set Google Analytics if you use it to track your website.
-# Always put it on the top of the configuration file, otherwise it won't work
-googleAnalytics = "UA-XXXXXXXXX-X"
-
 # (Optional) If you provide a Disqus shortname, comments will be enabled on
 # all pages.
 disqusShortname = "my-site"
@@ -250,7 +246,7 @@ In addition to this, there are several empty partials you can override to easily
 | `static/favicon.png`     | Override default favicon                                                              |
 | `assets/_custom.scss`    | Customise or override scss styles                                                     |
 | `assets/_variables.scss` | Override default SCSS variables                                                       |
-| `assets/_fonts.scss`     | Replace default font with custom fonts (e.g. local files or remote like google fonts) |
+| `assets/_fonts.scss`     | Replace default font with custom fonts (e.g. local files or remote fonts) |
 | `assets/mermaid.json`    | Replace Mermaid initialization config                                                 |
 
 ### Plugins
@@ -266,9 +262,8 @@ To enable plugins, add `@import "plugins/{name}";` to `assets/_custom.scss` in y
 
 ### Hugo Internal Templates
 
-There are a few hugo templates inserted in `<head>`
+There is a hugo template inserted in `<head>`
 
-- [Google Analytics](https://gohugo.io/templates/internal/#google-analytics)
 - [Open Graph](https://gohugo.io/templates/internal/#open-graph)
 
 To disable Open Graph inclusion you can create your own empty file `\layouts\_internal\opengraph.html`.
