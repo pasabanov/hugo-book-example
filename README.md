@@ -1,12 +1,12 @@
 # Hugo Book Theme
 
 [![Hugo](https://img.shields.io/badge/hugo-0.134-blue.svg)](https://gohugo.io)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Build with Hugo](https://github.com/alex-shpak/hugo-book/workflows/Build%20with%20Hugo/badge.svg)
 
 ### [Hugo](https://gohugo.io) documentation theme as simple as plain book
 
-![Screenshot](https://raw.githubusercontent.com/alex-shpak/hugo-book/master/images/screenshot.png)
+**Fork of the original [Book](https://themes.gohugo.io/themes/hugo-book) theme by [alex-shpak](https://github.com/alex-shpak), which was released under the MIT license. The code in this fork is released under the [Eclipse Public License 2.0 (EPL-2.0)](https://www.eclipse.org/legal/epl-2.0).**
+
+![Screenshot](https://raw.githubusercontent.com/pasabanov/hugo-book/main/images/screenshot.png)
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -34,7 +34,7 @@
 ## Requirements
 
 - Hugo 0.134 or higher
-- Hugo extended version, [Installation Instructions](https://gohugo.io/installation/)
+- Hugo extended version, [Installation Instructions](https://gohugo.io/installation)
 
 ## Installation
 
@@ -42,7 +42,7 @@
 Navigate to your hugo project root and run:
 
 ```
-git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
+git submodule add https://github.com/pasabanov/hugo-book themes/hugo-book
 ```
 
 Then run hugo (or set `theme = "hugo-book"`/`theme: hugo-book` in configuration file)
@@ -65,7 +65,7 @@ Navigate to your hugo project root and add [module] section to your `hugo.toml`:
 ```toml
 [module]
 [[module.imports]]
-path = 'github.com/alex-shpak/hugo-book'
+path = 'github.com/pasabanov/hugo-book'
 ```
 
 Then, to load/update the theme module and run hugo:
@@ -82,7 +82,7 @@ Below is an example on how to create a new site from scratch:
 ```sh
 hugo new site mydocs; cd mydocs
 git init
-git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
+git submodule add https://github.com/pasabanov/hugo-book themes/hugo-book
 cp -R themes/hugo-book/exampleSite/content.en/* ./content
 ```
 
@@ -105,7 +105,7 @@ A blog is not the primary usecase of this theme, so it has only minimal features
 ### Site Configuration
 
 There are a few configuration options that you can add to your `hugo.toml` file.  
-You can also see the `yaml` example [here](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/hugo.yaml).
+You can also see the `yaml` example [here](https://github.com/pasabanov/hugo-book/blob/master/exampleSite/hugo.yaml).
 
 ```toml
 # (Optional) If you provide a Disqus shortname, comments will be enabled on
@@ -124,64 +124,64 @@ enableGitInfo = true
 disableKinds = ['taxonomy', 'taxonomyTerm']
 
 [params]
-  # (Optional, default light) Sets color theme: light, dark or auto.
-  # Theme 'auto' switches between dark and light modes based on browser/os preferences
-  BookTheme = 'light'
+	# (Optional, default light) Sets color theme: light, dark or auto.
+	# Theme 'auto' switches between dark and light modes based on browser/os preferences
+	BookTheme = 'light'
 
-  # (Optional, default true) Controls table of contents visibility on right side of pages.
-  # Start and end levels can be controlled with markup.tableOfContents setting.
-  # You can also specify this parameter per page in front matter.
-  BookToC = true
+	# (Optional, default true) Controls table of contents visibility on right side of pages.
+	# Start and end levels can be controlled with markup.tableOfContents setting.
+	# You can also specify this parameter per page in front matter.
+	BookToC = true
 
-  # (Optional, default none) Set the path to a logo for the book. If the logo is
-  # /static/logo.png then the path would be 'logo.png'
-  BookLogo = 'logo.png'
+	# (Optional, default none) Set the path to a logo for the book. If the logo is
+	# /static/logo.png then the path would be 'logo.png'
+	BookLogo = 'logo.png'
 
-  # (Optional, default docs) Specify section of content to render as menu
-  # You can also set value to "*" to render all sections to menu
-  BookSection = 'docs'
+	# (Optional, default docs) Specify section of content to render as menu
+	# You can also set value to "*" to render all sections to menu
+	BookSection = 'docs'
 
-  # Set source repository location.
-  # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/alex-shpak/hugo-book'
+	# Set source repository location.
+	# Used for 'Last Modified' and 'Edit this page' links.
+	BookRepo = 'https://github.com/pasabanov/hugo-book'
 
-  # Specifies commit portion of the link to the page's last modified commit hash for 'doc' page
-  # type.
-  # Required if 'BookRepo' param is set.
-  # Value used to construct a URL consisting of BookRepo/BookCommitPath/<commit-hash>
-  # Github uses 'commit', Bitbucket uses 'commits'
-  BookCommitPath = 'commit'
+	# Specifies commit portion of the link to the page's last modified commit hash for 'doc' page
+	# type.
+	# Required if 'BookRepo' param is set.
+	# Value used to construct a URL consisting of BookRepo/BookCommitPath/<commit-hash>
+	# Github uses 'commit', Bitbucket uses 'commits'
+	BookCommitPath = 'commit'
 
-  # Enable 'Edit this page' links for 'doc' page type.
-  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
-  # Path must point to the site directory.
-  BookEditPath = 'edit/master/exampleSite'
+	# Enable 'Edit this page' links for 'doc' page type.
+	# Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
+	# Path must point to the site directory.
+	BookEditPath = 'edit/master/exampleSite'
 
-  # (Optional, default January 2, 2006) Configure the date format used on the pages
-  # - In git information
-  # - In blog posts
-  BookDateFormat = 'Jan 2, 2006'
+	# (Optional, default January 2, 2006) Configure the date format used on the pages
+	# - In git information
+	# - In blog posts
+	BookDateFormat = 'Jan 2, 2006'
 
-  # (Optional, default true) Enables search function with flexsearch,
-  # Index is built on fly, therefore it might slowdown your website.
-  # Configuration for indexing can be adjusted in i18n folder per language.
-  BookSearch = true
+	# (Optional, default true) Enables search function with flexsearch,
+	# Index is built on fly, therefore it might slowdown your website.
+	# Configuration for indexing can be adjusted in i18n folder per language.
+	BookSearch = true
 
-  # (Optional, default true) Enables comments template on pages
-  # By default partials/docs/comments.html includes Disqus template
-  # See https://gohugo.io/content-management/comments/#configure-disqus
-  # Can be overwritten by same param in page frontmatter
-  BookComments = true
+	# (Optional, default true) Enables comments template on pages
+	# By default partials/docs/comments.html includes Disqus template
+	# See https://gohugo.io/content-management/comments/#configure-disqus
+	# Can be overwritten by same param in page frontmatter
+	BookComments = true
 
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
-  # Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
-  # Theme will print warning if page referenced in markdown does not exists.
-  BookPortableLinks = true
+	# /!\ This is an experimental feature, might be removed or changed at any time
+	# (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
+	# Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
+	# Theme will print warning if page referenced in markdown does not exists.
+	BookPortableLinks = true
 
-  # /!\ This is an experimental feature, might be removed or changed at any time
-  # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
-  BookServiceWorker = true
+	# /!\ This is an experimental feature, might be removed or changed at any time
+	# (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
+	BookServiceWorker = true
 ```
 
 ### Multi-Language Support
@@ -274,28 +274,22 @@ In fact almost empty not quite empty because an empty file looks like absent for
 
 ## Shortcodes
 
-- [Buttons](https://hugo-book-demo.netlify.app/docs/shortcodes/buttons/)
-- [Columns](https://hugo-book-demo.netlify.app/docs/shortcodes/columns/)
-- [Details](https://hugo-book-demo.netlify.app/docs/shortcodes/details/)
-- [Hints](https://hugo-book-demo.netlify.app/docs/shortcodes/hints/)
-- [KaTeX](https://hugo-book-demo.netlify.app/docs/shortcodes/katex/)
-- [Mermaid](https://hugo-book-demo.netlify.app/docs/shortcodes/mermaid/)
-- [Tabs](https://hugo-book-demo.netlify.app/docs/shortcodes/tabs/)
+- [Buttons](https://hugo-book-demo.netlify.app/docs/shortcodes/buttons)
+- [Columns](https://hugo-book-demo.netlify.app/docs/shortcodes/columns)
+- [Details](https://hugo-book-demo.netlify.app/docs/shortcodes/details)
+- [Hints](https://hugo-book-demo.netlify.app/docs/shortcodes/hints)
+- [KaTeX](https://hugo-book-demo.netlify.app/docs/shortcodes/katex)
+- [Mermaid](https://hugo-book-demo.netlify.app/docs/shortcodes/mermaid)
+- [Tabs](https://hugo-book-demo.netlify.app/docs/shortcodes/tabs)
 
 By default, Goldmark trims unsafe outputs which might prevent some shortcodes from rendering. It is recommended to set `markup.goldmark.renderer.unsafe=true` if you encounter problems.
 
 ```toml
 [markup.goldmark.renderer]
-  unsafe = true
+	unsafe = true
 ```
 
 If you are using `config.yaml` or `config.json`, consult the [configuration markup](https://gohugo.io/getting-started/configuration-markup/)
-
-## Versioning
-
-This theme follows a simple incremental versioning. e.g. `v1`, `v2` and so on. There might be breaking changes between versions.
-
-If you want lower maintenance, use one of the released versions. If you want to live on the bleeding edge of changes, you can use the `master` branch and update your website when needed.
 
 ## Contributing
 
@@ -310,3 +304,21 @@ Primary goals are:
 - Avoid using JS if it can be solved by CSS.
 
 Feel free to open issues if you find missing configuration or customisation options.
+
+## License
+
+This project is licensed under the Eclipse Public License 2.0 (EPL-2.0). You may obtain a copy of the License at https://www.eclipse.org/legal/epl-2.0.
+
+## Copyright
+
+© [Alex Shpak](https://github.com/alex-shpak), [Contributors](https://github.com/alex-shpak/hugo-book/graphs/contributors) and [Petr Alexandrovich Sabanov](https://github.com/pasabanov)
+
+## Upstream Tracking
+
+This repository is a soft fork that tracks the original repository.
+
+Last integrated commit: `7c78a39c531aa2492ed7e92f2ce9dfb2c8c0d3fa`.
+
+## Metrics
+
+![repo size](https://img.shields.io/github/repo-size/pasabanov/hugo-book?color=6e54bb)

@@ -2,15 +2,20 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "Book"
-license = "MIT"
-licenselink = "https://github.com/alex-shpak/hugo-book/blob/master/LICENSE"
-description = "Hugo documentation theme as simple as plain book"
-homepage = "https://github.com/alex-shpak/hugo-book"
-demosite = "https://hugo-book-demo.netlify.app"
+license = "EPL-2.0"
+licenselink = "https://github.com/pasabanov/hugo-book/blob/master/LICENSE.txt"
+description = "Hugo documentation theme as simple as plain book."
+homepage = "https://github.com/pasabanov/hugo-book"
 tags = ["responsive", "clean", "documentation", "docs", "flexbox", "search", "mobile", "multilingual", "disqus"]
 features = []
 min_version = "0.128.0"
 
 [author]
-  name = "Alex Shpak"
-  homepage = "https://github.com/alex-shpak/"
+	name = "Petr Alexandrovich Sabanov"
+	homepage = "https://github.com/pasabanov"
+	repo = "https://github.com/pasabanov/hugo-book"
+
+[original]
+	name = "Alex Shpak"
+	homepage = "https://github.com/alex-shpak"
+	repo = "https://github.com/alex-shpak/hugo-book"
