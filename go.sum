@@ -1,4 +1,2 @@
-github.com/pasabanov/hugo-book v0.0.0-20250108115718-0c3e686e5707 h1:Z5/G3ObTAUG+Todm9vz5R9SyPn6yjGxe6ifHeayTC2E=
-github.com/pasabanov/hugo-book v0.0.0-20250108115718-0c3e686e5707/go.mod h1:RkfyerrJ/Zshd65kZdlNuUxqp+u0V/AewF7IgSjwWa8=
-github.com/pasabanov/hugo-book v0.0.0-20250108122038-376d0277101b h1:+ByrTtWWUC5P1ig8VSQYp/Ohd9UBVCaIpSqTp+PZ89k=
-github.com/pasabanov/hugo-book v0.0.0-20250108122038-376d0277101b/go.mod h1:RkfyerrJ/Zshd65kZdlNuUxqp+u0V/AewF7IgSjwWa8=
+github.com/pasabanov/hugo-book v0.10.1 h1:r2XANp4GEylQU0aVh22LIXdl7r857W7/bw5/1Z39Dwc=
+github.com/pasabanov/hugo-book v0.10.1/go.mod h1:RkfyerrJ/Zshd65kZdlNuUxqp+u0V/AewF7IgSjwWa8=
