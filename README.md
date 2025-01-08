@@ -7,6 +7,8 @@
 **Fork of the original [Book](https://themes.gohugo.io/themes/hugo-book) theme by [alex-shpak](https://github.com/alex-shpak), which was released under the [MIT license](https://mit-license.org/). The code in this fork is released under the [Eclipse Public License 2.0 (EPL-2.0)](https://www.eclipse.org/legal/epl-2.0).  
 This repository was modified to represent an example of a site using theme. The actual theme can be found in [this repository](https://github.com/pasabanov/hugo-book).**
 
+![Screenshot](https://github.com/user-attachments/assets/3dda67f7-09cc-47d2-97fc-b4d676a78ac0)
+
 ## Contributing
 
 ### [Extra credits to contributors](https://github.com/alex-shpak/hugo-book/graphs/contributors)
