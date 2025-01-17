@@ -9,23 +9,37 @@ KaTeX shortcode let you render math typesetting in markdown document. See [KaTeX
 {{% columns %}}
 
 ```latex
-{{</* katex display=true >}}
+{{</* kk >}}
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-{{< /katex */>}}
+{{< /kk */>}}
 ```
 
 <--->
 
-{{< katex display=true >}}
+{{< kk >}}
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-{{< /katex >}}
+{{< /kk >}}
 
 {{% /columns %}}
 
 ## Display Mode Example
 
-Here is some inline example: {{< katex >}}\pi(x){{< /katex >}}, rendered in the same line. And below is `display` example, having `display: block`
-{{< katex display=true >}}
+Here is some inline example: $\pi(x)$ with `$` characters, rendered in the same line. And below is "display" example with `$$` characters:
+$$
 f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
-{{< /katex >}}
+$$
 Text continues here.
+
+And some more examples:
+$ inline $
+$$ display $$
+\\( inline \\)
+\\[ display \\]
+
+<span>
+\(inline\)
+</span>
+
+<span>
+\[display\]
+</span>

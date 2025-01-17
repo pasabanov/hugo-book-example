@@ -99,6 +99,11 @@ enableGitInfo = true
 	# Configuration for indexing can be adjusted in i18n folder per language.
 	BookSearch = true
 
+	# (Optional, default false) Enables KaTeX on every page.
+	# When enabled, formulas enclosed in `$...$`, `$$...$$`, `\(...\)` or `\[...\]`
+	# will be automatically rendered without requiring shortcodes `k` and `kk`.
+	BookGlobalKatex = false
+
 	# (Optional, default false) Enables comments template on pages
 	# By default partals/docs/comments.html includes Disqus template
 	# See https://gohugo.io/content-management/comments/#configure-disqus
